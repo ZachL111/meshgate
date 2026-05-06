@@ -1,0 +1,73 @@
+{
+  "repo": "meshgate",
+  "language": "Go",
+  "category": "Platform engineering",
+  "goal": "Model service-mesh routes, retries, traffic splits, and budgets.",
+  "review_model": {
+    "terms": [
+      "rollout width",
+      "quota pressure",
+      "route drift",
+      "secret scope"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "rollout width",
+      "signal": 66,
+      "slack": 39,
+      "drag": 12,
+      "confidence": 58,
+      "score": 193,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "quota pressure",
+      "signal": 61,
+      "slack": 51,
+      "drag": 10,
+      "confidence": 48,
+      "score": 191,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "route drift",
+      "signal": 73,
+      "slack": 32,
+      "drag": 8,
+      "confidence": 70,
+      "score": 224,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "secret scope",
+      "signal": 67,
+      "slack": 49,
+      "drag": 32,
+      "confidence": 88,
+      "score": 175,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "rollout width",
+      "signal": 74,
+      "slack": 26,
+      "drag": 23,
+      "confidence": 93,
+      "score": 198,
+      "lane": "ship"
+    }
+  ]
+}
