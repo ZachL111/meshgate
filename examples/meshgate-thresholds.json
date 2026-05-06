@@ -1,0 +1,17 @@
+{
+  "repo": "meshgate",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 203,
+    "watch": 109
+  },
+  "terms": [
+    "rollout width",
+    "quota pressure",
+    "route drift",
+    "secret scope"
+  ]
+}
